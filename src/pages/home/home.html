@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Delivery Room</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-left (click)="login()">
+        <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
+        Login
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      <img src="/assets/img/dr.jpg">
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col >
+        <button (click)="prayers('Worship')" ion-button color="Chocolate" small>
+          Worship 
+        </button>  
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Academics')" ion-button color="LimeGreen" small>
+          Academics
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Business')" ion-button color="Blue" small>
+          Business
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col >
+        <button (click)="prayers('Meditation')" ion-button color="danger" small>
+          Meditation 
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Thanksgiving')" ion-button color="primary" small>
+          Thanksgiving   
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Faith')" ion-button color="danger" small>
+          Faith
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col >
+        <button (click)="prayers('Marriage')" ion-button color="DarkOrange" small>
+          Marriage 
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Confession')" ion-button color="SeaGreen" small>
+          Confession
+        </button>   
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Favour')" ion-button color="FireBrick" small>
+          Favour 
+        </button> 
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>
+        <button (click)="prayers('Destiny')" ion-button color="LimeGreen" small>
+          Destiny    
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Warfare')" ion-button color="danger" small>
+          Warfare
+        </button> 
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Supplication')" ion-button color="Orange" small>
+          Supplication
+        </button>   
+      </ion-col>
+      
+    </ion-row>
+    <ion-row >
+      <ion-col >
+        <button (click)="prayers('Relationship')" ion-button color="HotPink" small>
+          Relationship 
+        </button>
+      </ion-col>
+      <ion-col >
+        <button (click)="prayers('Agreement')" ion-button color="DarkMagenta" small>
+          Agreement 
+        </button>
+      </ion-col>
+      <ion-col >
+        
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
