@@ -19,11 +19,11 @@
   <ion-list> 
     <ion-item>
       <ion-label color="primary" floating>Prayer Point Title</ion-label>
-      <ion-input  [(ngModel)]="prayerRequestForm.title" name="title" type="text" #title="ngModel"></ion-input>
+      <ion-input  [(ngModel)]="prayer.title" name="title" type="text" #title="ngModel"></ion-input>
     </ion-item> 
     <ion-item>
       <ion-label color="primary">Category</ion-label>
-      <ion-select [(ngModel)]="prayerRequestForm.category" name="category">
+      <ion-select [(ngModel)]="prayer.category" name="category">
         <ion-option >Agreement</ion-option>
         <ion-option >Academics</ion-option>
         <ion-option >Business</ion-option>
@@ -41,15 +41,15 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" floating>Prayer Point</ion-label>
-      <ion-textarea [(ngModel)]="prayerRequestForm.prayer" name="prayer" rows="3" #prayer="ngModel" required></ion-textarea>
+      <ion-textarea [(ngModel)]="prayer.content" name="prayer" rows="3" #prayer="ngModel" required></ion-textarea>
     </ion-item>
-    <p [hidden]="prayer.valid || submitted == false" color="danger" padding-left>
+    <p ion-text [hidden]="prayer.valid || submitted == false" color="danger" padding-left>
       Prayer Point is required
     </p>
   </ion-list>
 
   <div padding>
-    <button ion-button (click)="addPrayerPoint(prayerRequestForm)" type="submit" block>Create</button>
+    <button ion-button (click)="createPrayer(prayerRequestForm)" type="submit" block>Create</button>
   </div>
 
 </form>

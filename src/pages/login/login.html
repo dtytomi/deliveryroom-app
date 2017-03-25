@@ -6,38 +6,39 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-grid>
-  <ion-row>
-  </ion-row>
-  <ion-row>
-  </ion-row>
-  <ion-row>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left color="facebook" block (click)="facebookLogin()">
-        <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
-        Facebook
-      </button>
-    </ion-col>
-  </ion-row>
+    <div class="background">
+      <div class="overlay">
+        <div class="header">
+          <img src="./assets/img/keyhole.png" class="logo">
+          <h1 class="app-name">Delivery Room</h1>
+          <p class="tagline">men ought always to pray, <br /> and not to faint. Luke 18 : 1b</p>
+        </div>
+        <div class="signup col-md-6">
+          <ion-row >
+            <ion-col>
+              <button ion-button color="facebook" block (click)="facebookLogin()" round>
+                <i class="fa fa-facebook-square"></i>&nbsp;
+                Login with  Facebook
+              </button>
+            </ion-col>
+          </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left color="twitterBackground" block (click)="twitterLogin()">
-        <ion-icon ios="logo-twitter" md="logo-twitter" color="twitterLogo"></ion-icon>
-        Twitter
-      </button>
-    </ion-col>
-  </ion-row>
-  
-</ion-grid>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left color="twitterBackground" block (click)="twitterLogin()" round>
+                <ion-icon ios="logo-twitter" md="logo-twitter" color="twitterLogo"></ion-icon>
+                Login with Twitter
+              </button>
+            </ion-col>
+          </ion-row> 
+          <p class="terms">By signing up, I agree to delivery room's<br /> Terms and Conditions</p>
+        </div>
+      </div>
+    </div>
+  </ion-grid>
 </ion-content>

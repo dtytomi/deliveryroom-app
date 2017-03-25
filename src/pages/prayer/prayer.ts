@@ -1,8 +1,11 @@
+import { Storage } from '@ionic/storage';
+
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
-import { CreatePrayerPage } from '../create-prayer/create-prayer';
+import  { PrayerService } from '../../providers/prayer-service';
+import { LoginPage } from '../login/login';
+import  { CreatePrayerPage } from '../create-prayer/create-prayer';
 
 /*
   Generated class for the Prayer page.
@@ -16,14 +19,25 @@ import { CreatePrayerPage } from '../create-prayer/create-prayer';
 })
 export class PrayerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  prayers: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+   private prayerService: PrayerService, public storage: Storage) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrayerPage');
+    this.prayerService.getPrayers().then((data) => {
+      this.prayers = data;
+      console.log(this.prayers);
+    });
   }
 
   addPrayer () {
-    this.navCtrl.push(CreatePrayerPage);
+    if( this.storage.get('token') && this.storage.get('date-date')) {
+      // code...
+      this.navCtrl.push(LoginPage);
+    } else {
+       this.navCtrl.push(CreatePrayerPage);
+    }
   }
-
 }

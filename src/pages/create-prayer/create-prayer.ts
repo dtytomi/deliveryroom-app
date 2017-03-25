@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { NgForm } from '@angular/forms';
+
+import { PrayerPage } from '../prayer/prayer';
+import { PrayerService } from '../../providers/prayer-service' ;
+
 
 /*
   Generated class for the CreatePrayer page.
@@ -13,10 +18,29 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CreatePrayerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  prayer : {
+    title?: string,
+    category?: string,
+    content?: string
+  } = {};
+  submitted = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private prayerService: PrayerService) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatePrayerPage');
+  }
+
+  createPrayer(form: NgForm) {
+    this.submitted = true;
+
+    if(form.valid) {
+      // code...
+      this.prayerService.createPrayer(this.prayer);
+      this.navCtrl.push(PrayerPage, {
+        prayerCategory: this.prayer.category
+      });
+    }
   }
 
 }

@@ -18,12 +18,34 @@ declare var cordova: any;
 })
 export class LoginPage {
 
-  constructor(private platform: Platform , public navCtrl: NavController, public navParams: NavParams, public loginService: LoginService) {
+  tabBarElement: any;
+
+  constructor(private platform: Platform , public navCtrl: NavController, 
+    public navParams: NavParams, public loginService: LoginService) {
     this.platform = platform;
+    this.tabBarElement = document.querySelectorAll('.tabbar');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  ionViewWillEnter() {
+    if(this.tabBarElement !== null) {
+      // code...
+      Object.keys(this.tabBarElement).map((key) => {
+       this.tabBarElement[key].style.transform = 'translateY(56px)';
+      })
+    }
+  }
+
+  ionViewWillLeave() {
+    if(this.tabBarElement !== null) {
+      // code...
+      Object.keys(this.tabBarElement).map((key) => {
+       this.tabBarElement[key].style.transform = 'translateY(0)';
+      })
+    }
   }
 
   facebookLogin () {

@@ -1,3 +1,51 @@
 page-login {
+  .background {
+    background: url('../assets/img/Morning-Prayer-Sweetness.png') no-repeat center scroll #fff;
+    background-size: 100% 100%;
+    padding-bottom: 162%;
+  }
 
+  .fixed-content,
+  .scroll-content {
+    margin-bottom: 0px !important;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(224, 22, 7, 0.52);
+  }
+
+  .header {
+    color: white;
+  }
+
+  .logo {
+    margin-top: 20%;
+    margin-left: 40%;
+  }
+
+  .app-name {
+    text-align: center;
+  }
+
+  .tagline {
+    margin-top: -2%;
+    text-align: center;
+    font-size: 1.67rem;
+  }
+
+  .signup {
+    margin-top: 45%;
+  }
+
+  .terms {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+  }
 }
