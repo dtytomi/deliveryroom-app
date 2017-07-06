@@ -1,0 +1,97 @@
+page-home {
+
+  .int {
+    background: url('../assets/img/images.png') no-repeat scroll #000000;
+    padding: 16.5%;
+  }
+
+  .background {
+    background: url('../assets/img/images.png') no-repeat scroll #000000;
+    padding: 16.5%;
+  }
+
+  .background-thanksgiving {
+    background: url('../assets/img/Holy.png') no-repeat center scroll #fff;
+    padding: 17%;
+  }
+
+  .overlay-faith {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(199, 86, 121, 0.82);
+  }
+
+  .overlay-warfare{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(204, 61, 166, 0.7);;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(103, 190, 234, 0.73);
+  }
+
+  .overlay-thanksgiving{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(219, 164, 62, 0.78);
+  }
+
+  .category {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+
+  .red-button {
+    margin-left: 34%;
+    margin-top: -3%;
+    background-color: #d22673;
+    color: white;
+  }
+
+  .violet-button {
+    margin-left: 33%;
+    margin-top: -3%;
+    background-color: #be11dc;
+    color: white;
+  }
+
+  .blue-button {
+    margin-left: 30%;
+    margin-top: -2%;
+    background-color: #5eb5e7;
+    color: white;
+  }
+
+  .yellow-button {
+    margin-left: 30%;
+    margin-top: -3%;
+    background-color: #FF9800;
+    color: white;
+  }
+
+  .topic {
+    margin-top: 10%;
+  }
+
+}
+

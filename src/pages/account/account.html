@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Account page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <ion-title>account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item >
+      <ion-grid>
+        <ion-row center>
+          <ion-col offset-33>
+             <ion-avatar >
+              <img src="{{me ? 
+                './assets/img/default.png' : user.facebook.picture.data.url || user.twitter.profile_image_url_https }}">
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item>{{ me ? 'Name' : user.name}}</ion-item>
+      <ion-item>{{ me ? 'username' : user.twitter.screen_name || ' '}}</ion-item>
+    </ion-item>
+  </ion-list>
+
+  <ion-item-group>
+    <ion-item-divider color="light">About Delivery Room</ion-item-divider>
+    <ion-item>{{ "A platform to share prayer resources and "}}</ion-item>
+    <ion-item>{{"develop capacity in place of prayer. "}}</ion-item>
+    <ion-item>{{"The vision was birthed as a result of"}}</ion-item>
+    <ion-item>{{"personal experience of the power of "}}</ion-item>
+    <ion-item>{{"prayer to change bad habit have being "}}</ion-item>   
+    <ion-item>{{"battling with for years"}}</ion-item>    
+  </ion-item-group>
+
+</ion-content>

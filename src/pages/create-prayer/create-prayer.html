@@ -1,0 +1,57 @@
+<!--
+  Generated template for the CreatePrayer page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <ion-title>Create Prayer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<form #prayerRequestForm="ngForm" novalidate>
+  <ion-list > 
+    <ion-item>
+      <ion-label color="primary" floating>Prayer Point Title</ion-label>
+      <ion-input  [(ngModel)]="prayer.title" name="title" type="text" #title="ngModel" spellcheck="false" autocapitalize="off"
+          required></ion-input>
+    </ion-item> 
+    <p ion-text [hidden]="title.valid || submitted == false" color="danger" padding-left>
+        Title is required
+    </p>
+
+    <ion-item>
+      <ion-label color="primary">Category</ion-label>
+      <ion-select [(ngModel)]="prayer.category" name="category" #category="ngModel" required>
+        <ion-option >Repentance</ion-option>
+        <ion-option selected="true">Faith</ion-option>
+        <ion-option >Thanksgiving</ion-option>
+        <ion-option >Liberation</ion-option>
+      </ion-select>
+    </ion-item>
+    <p ion-text [hidden]="category.valid || submitted == false" color="danger" padding-left>
+        Category is required
+    </p>
+
+    <ion-item>
+      <ion-label color="primary" floating>Prayer Point</ion-label>
+      <ion-textarea [(ngModel)]="prayer.content" name="content" rows="3" #content="ngModel" required></ion-textarea>
+    </ion-item>
+    <p ion-text [hidden]="content.valid || submitted == false" color="danger" padding-left>
+      Prayer Point is required
+    </p>
+  </ion-list>
+
+  <div padding>
+    <button ion-button (click)="createPrayer(prayerRequestForm)" type="submit" block>Create</button>
+  </div>
+
+</form>
+
+</ion-content>

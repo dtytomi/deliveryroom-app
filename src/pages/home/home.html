@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Delivery Room</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div>
+    <ion-grid>
+      <ion-row >
+        <ion-col col-12 col-sm class="background">
+          <div class="overlay-faith">
+            <div class="topic">
+              <h1 class="category">Faith</h1>
+              <button ion-button class="red-button" (click)='prayer(Faith)' round small>Hoped For</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-12 col-sm class="int">
+          <div class="overlay-warfare">
+            <div class="topic">
+              <h1 class="category">Intercessory and Warfare</h1>
+              <button ion-button class="violet-button" (click)='prayer(Liberation)' round small>Liberation</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-12 col-sm class="background">
+          <div class="overlay">
+            <div class="topic">
+              <h1 class="category">Consecration and Commitment</h1>
+              <button ion-button class="blue-button" (click)='prayer(Repentance)' round small>Repentance</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-12 col-sm class="background-thanksgiving">
+          <div class="overlay-thanksgiving">
+            <div class="topic">
+              <h1 class="category">Praise and Worship</h1>
+              <button ion-button class="yellow-button" (click)='prayer(Thanksgiving)' round small>Thanksgiving</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+  </div>
+</ion-content>

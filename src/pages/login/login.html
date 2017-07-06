@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <div class="background">
+      <div class="overlay">
+        <div class="header">
+          <img src="./assets/img/keyhole.png" class="logo">
+          <h1 class="app-name">Delivery Room</h1>
+          <p class="tagline">men ought always to pray, <br /> and not to faint. Luke 18 : 1b</p>
+        </div>
+        <div class="signup col-md-6">
+          <ion-row >
+            <ion-col>
+              <button ion-button color="facebook" block (click)="facebookLogin()" round>
+                <i class="fa fa-facebook-square"></i>&nbsp;
+                Login with  Facebook
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left color="twitterBackground" block (click)="twitterLogin()" round>
+                <ion-icon ios="logo-twitter" md="logo-twitter" color="twitterLogo"></ion-icon>
+                Login with Twitter
+              </button>
+            </ion-col>
+          </ion-row> 
+          <p class="terms">By signing up, I agree to delivery room's<br /> Terms and Conditions</p>
+        </div>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
