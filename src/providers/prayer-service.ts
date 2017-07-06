@@ -55,7 +55,6 @@ export class PrayerService {
     });
   }
 
-
   createPrayer(prayer) {
 
     return new Promise((resolve, reject) => {
@@ -81,7 +80,6 @@ export class PrayerService {
       });
 
     });
-
   }
 
   deletePrayer(id) {

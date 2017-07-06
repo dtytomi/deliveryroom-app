@@ -28,7 +28,7 @@ export class CreatePrayerPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private prayerService: PrayerService) {}
 
   ionViewDidLoad() {
-    
+
   }
 
   createPrayer(form: NgForm) {

@@ -5,12 +5,8 @@ import { Storage } from '@ionic/storage';
 import { LoginService } from '../../providers/login-service';
 import { AccountPage } from '../account/account';
 import { CreatePrayerPage } from '../create-prayer/create-prayer';
-
-declare var cordova: any;
-
 /*
   Generated class for the  page.
-
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */

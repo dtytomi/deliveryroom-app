@@ -11,6 +11,7 @@ import {InAppBrowser } from '@ionic-native/in-app-browser';
 // Declaring cordova so we can use it for the plugin
 // declare var cordova: any;
 declare var window: any;
+
 /*
   Generated class for the LoginService provider.
 
@@ -55,7 +56,6 @@ export class LoginService {
           console.error(err);
           reject(err);
         });
-
       });
     });
   }

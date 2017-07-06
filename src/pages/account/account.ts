@@ -1,12 +1,19 @@
 import { Storage } from '@ionic/storage';
 
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { AlertController, NavController, NavParams } from 'ionic-angular';
+=======
+import { NavController, NavParams } from 'ionic-angular';
+>>>>>>> 968f46a71553a465c62f69500a01c3efbadd9f33
 
 import { LoginPage } from '../login/login';
 import { LoginService } from '../../providers/login-service';
 
+<<<<<<< HEAD
 declare var window: any;
+=======
+>>>>>>> 968f46a71553a465c62f69500a01c3efbadd9f33
 
 /*
   Generated class for the Account page.
@@ -21,6 +28,7 @@ declare var window: any;
 export class AccountPage {
 
   user: any;
+<<<<<<< HEAD
   loading: any;
   me: boolean;
 
@@ -73,4 +81,30 @@ export class AccountPage {
   }
 
 
+=======
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public loginService: LoginService, public storage: Storage ) {
+
+    // Check if the user has already login 
+    this.storage.get('hasLoggedIn')
+      .then((hasLoggedIn) => {
+        if (!hasLoggedIn) {
+          this.navCtrl.push(LoginPage);
+        } else {
+          this.loginService.getUser()
+          .subscribe( data => {
+            this.user = data;
+            console.log(this.user);
+          });
+        }
+        
+      })
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad AccountPage');
+  }
+
+>>>>>>> 968f46a71553a465c62f69500a01c3efbadd9f33
 }
