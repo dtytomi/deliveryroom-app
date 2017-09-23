@@ -25,11 +25,11 @@
   <ion-card *ngFor="let prayer of prayers ">
     <ion-item>
       <ion-avatar item-left>
-        <img src="{{
+        <img src="{{ prayer.user ?
             prayer.user.facebook.picture.data.url 
-            || prayer.user.twitter.profile_image_url_https || './assets/img/default.png'}}">
+            || prayer.user.twitter.profile_image_url_https : './assets/img/default.png'}}">
       </ion-avatar>
-      <h2>{{ prayer.name || 'Odutayo Ayooluwa' }}</h2>
+      <h2>{{ prayer.name || 'username' }}</h2>
       <p>{{prayer.category}}</p>
     </ion-item>
 

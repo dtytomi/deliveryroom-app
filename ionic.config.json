@@ -1,6 +1,9 @@
 {
   "name": "DeliveryRoom",
   "app_id": "1ee57d47",
-  "v2": true,
-  "typescript": true
+  "type": "ionic-angular",
+  "watchPatterns": [],
+  "integrations": {
+    "cordova": {}
+  }
 }

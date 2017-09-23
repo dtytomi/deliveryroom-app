@@ -29,10 +29,10 @@
     <ion-item>
       <ion-label color="primary">Category</ion-label>
       <ion-select [(ngModel)]="prayer.category" name="category" #category="ngModel" required>
-        <ion-option >Repentance</ion-option>
-        <ion-option selected="true">Faith</ion-option>
-        <ion-option >Thanksgiving</ion-option>
-        <ion-option >Liberation</ion-option>
+        <ion-option value="Repentance">Repentance</ion-option>
+        <ion-option value="Faith" selected="true">Faith</ion-option>
+        <ion-option value="Thanksgiving" >Thanksgiving</ion-option>
+        <ion-option value="Liberation" >Liberation</ion-option>
       </ion-select>
     </ion-item>
     <p ion-text [hidden]="category.valid || submitted == false" color="danger" padding-left>
