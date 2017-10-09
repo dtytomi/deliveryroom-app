@@ -23,7 +23,8 @@ export class PrayerPage {
   prayers: any;
   token: any;
   tokenDate: any;
-  loading: any;  
+  loading: any; 
+  category: string; 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,
    private prayerService: PrayerService, public storage: Storage, public loadingCtrl: LoadingController) {
@@ -33,13 +34,15 @@ export class PrayerPage {
       this.loading = this.loadingCtrl.create({
         content: 'Loading Please Wait...'
       });
+
+      this.category = this.navParams.get('prayerCategory');
   }
 
-  ionViewDidLoad(category) {
+  ionViewDidLoad() {
     this.loading.present();
-    if (category) { 
+    if (this.category) { 
       // code...
-      this.prayerService.getPrayersByCategory(category).then((data) => {
+      this.prayerService.getPrayersByCategory(this.category).then((data) => {
         this.loading.dismiss();
         this.prayers = data;
       });
