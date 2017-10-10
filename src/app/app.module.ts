@@ -1,38 +1,33 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { BrowserModule } from '@angular/platform-browser';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-import {InAppBrowser} from '@ionic-native/in-app-browser';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 
-import { AccountPage } from '../pages/account/account';
-import { CreatePrayerPage } from '../pages/create-prayer/create-prayer';
-import { LoginPage } from '../pages/login/login';
-import { PrayerPage } from '../pages/prayer/prayer';
+import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
+import { Login } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Prayers } from '../pages/prayers/prayers';
+import { AddPrayers } from '../pages/add-prayers/add-prayers';
 import { LoginService } from '../providers/login-service';
-import { PrayerService } from '../providers/prayer-service';
+import { PrayersService } from '../providers/prayers-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-const cloudSettings: CloudSettings = {
-  'core': {
-    'app_id': '1ee57d47'
-  }
-};
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
+>>>>>>> rebuilding deliveryroom
 
 @NgModule({
   declarations: [
     MyApp,
-    AccountPage,
-    CreatePrayerPage,
+    AboutPage,
+    AddPrayers,
     HomePage,
-    LoginPage,
-    PrayerPage,
+    Login,
+    Prayers,
     TabsPage
   ],
   imports: [
@@ -40,24 +35,24 @@ const cloudSettings: CloudSettings = {
     HttpModule,
     JsonpModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot(),
-    CloudModule.forRoot(cloudSettings)
+    IonicStorageModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CreatePrayerPage,
+    AboutPage,
+    AddPrayers,
     HomePage,
-    TabsPage,
-    LoginPage,
-    AccountPage,
-    PrayerPage  
+    Login,
+    Prayers,
+    TabsPage
   ],
   providers: [
     InAppBrowser,
     LoginService,
-    PrayerService,
+    PrayersService,
     StatusBar,
+    SpinnerDialog,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

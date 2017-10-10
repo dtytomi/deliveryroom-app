@@ -13,6 +13,10 @@ log.txt
 npm-debug.log*
 
 .idea/
+<<<<<<< b85019584648d99953ccaf3bbef325988e9398ec
+=======
+.sourcemaps/
+>>>>>>> rebuilding deliveryroom
 .sass-cache/
 .tmp/
 .versions/

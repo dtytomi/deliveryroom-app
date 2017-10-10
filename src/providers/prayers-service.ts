@@ -4,16 +4,14 @@ import 'rxjs/add/operator/map';
 
 import { Storage } from '@ionic/storage';
 
-declare var window: any;
-
 /*
-  Generated class for the PrayerService provider.
+  Generated class for the PrayersService provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
 */
 @Injectable()
-export class PrayerService {
+export class PrayersService {
 
   data: any;
   token: any;
@@ -80,12 +78,6 @@ export class PrayerService {
       });
 
     });
-  }
-
-  deletePrayer(id) {
-    this.http.delete('https://deliveryroom.mybluemix.net/prayer/' + id).subscribe((res) => {
-      console.log(res.json());
-    })
   }
 
 }

@@ -6,17 +6,14 @@ import 'rxjs/add/operator/map';
 
 import { Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import {InAppBrowser } from '@ionic-native/in-app-browser';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-// Declaring cordova so we can use it for the plugin
-// declare var cordova: any;
 declare var window: any;
 
 /*
   Generated class for the LoginService provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
 */
 @Injectable()
 export class LoginService {
@@ -33,11 +30,11 @@ export class LoginService {
 
   constructor(public http: Http, public storage: Storage, 
     private iab: InAppBrowser, public events: Events) {
-  
+
   }
 
-  checkAuthentication() {
-
+  getUser() {
+    
     return new Promise((resolve, reject) => {
       // load token if exist
       this.storage.get('token').then((value) => {
@@ -46,20 +43,27 @@ export class LoginService {
 
         let headers = new Headers();
           headers.append('Authorization', this.token);
-          headers.append('Content-Type', 'application/json');
-
-        this.http.get('https://deliveryroom.mybluemix.net/token', {headers: headers})
-        .subscribe(res => {
-         
-          resolve(res);
+        this.http.get('https://deliveryroom.mybluemix.net/me', {headers: headers})
+        .subscribe((response: Response) => {
+          resolve(response.json());
         }, (err) => {
           console.error(err);
           reject(err);
         });
+      
       });
+
     });
   }
 
+  // return promise
+  hasLoggedIn() {
+    return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
+      return value === true;
+    });
+  };
+
+>>>>>>> rebuilding deliveryroom
   login(url): Promise <any> {
 
     return new Promise((resolve, reject) => {
@@ -118,43 +122,5 @@ export class LoginService {
 
     });
   }
-
-  getUser() {
-    
-    return new Promise((resolve, reject) => {
-      // load token if exist
-      this.storage.get('token').then((value) => {
-
-        this.token = value;
-
-        let headers = new Headers();
-          headers.append('Authorization', this.token);
-
-        this.http.get('https://deliveryroom.mybluemix.net/me', {headers: headers})
-        .subscribe((response: Response) => {
-        
-          resolve(response.json());
-        }, (err) => {
-          console.error(err);
-          reject(err);
-        });
-      
-      });
-
-    });
-  }
-
-  logout() {
-    this.storage.remove(this.HAS_LOGGED_IN);
-    this.storage.remove('currentUser');
-  }
-
-  // return promise
-  hasLoggedIn() {
-    return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
-      return value === true;
-    });
-  };
-
-
+  
 }
