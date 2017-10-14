@@ -19,7 +19,6 @@ import { AddPrayers } from '../add-prayers/add-prayers';
   templateUrl: 'login.html',
 })
 export class Login {
->>>>>>> rebuilding deliveryroom
 
   tabBarElement: any;
   facebookUrl: any;

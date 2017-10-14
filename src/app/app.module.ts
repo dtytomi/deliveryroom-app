@@ -18,7 +18,6 @@ import { PrayersService } from '../providers/prayers-service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SpinnerDialog } from '@ionic-native/spinner-dialog';
->>>>>>> rebuilding deliveryroom
 
 @NgModule({
   declarations: [

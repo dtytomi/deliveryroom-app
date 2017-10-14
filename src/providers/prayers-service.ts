@@ -24,7 +24,7 @@ export class PrayersService {
     
     return new Promise((resolve, reject) => {
  
-      this.http.get('https://deliveryroom.mybluemix.net/prayer/')
+      this.http.get('https://deliveryroom.herokuapp.com/prayer')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
